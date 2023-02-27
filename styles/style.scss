@@ -1,0 +1,28 @@
+@import 'global';
+@import 'result';
+@import 'summary';
+
+section {
+  @include flex(row, center);
+
+  min-height: 100vh;
+  margin: auto;
+}
+
+.container {
+  @include flex(row, center, stretch);
+
+  box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4rem;
+  background-color: $white;
+}
+
+@include media-query(mobile) {
+  section {
+    width: 100%;
+  }
+
+  .container {
+    @include flex(column, center, center);
+  }
+}
